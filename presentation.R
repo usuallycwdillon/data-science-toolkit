@@ -18,7 +18,7 @@ publish(user="usuallycwdillon", repo="data-science-toolkit", host="github")
 ##### STASH #####
 
 
-```{r simple-plot, fig.height = 6, fig.align = 'center', message = F}
-require(ggplot2)
-qplot(wt, mpg, data = mtcars)
-```
+# ```{r simple-plot, fig.height = 6, fig.align = 'center', message = F}
+# require(ggplot2)
+# qplot(wt, mpg, data = mtcars)
+# ```

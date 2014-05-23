@@ -4,11 +4,27 @@ subtitle    : Presentation to MORSS WG33 and WG28
 author      : Michael A. Smith and Clarence W. Dillon
 job         : MORSS 2014
 framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight.js  # {highlight.js, prettify, highlight}
-hitheme     : tomorrow      # 
+highlighter : highlight  # {highlight.js, prettify, highlight}
+hitheme     : solarized_light # {tomorrow} 
 widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+
 ---
+<!-- Limit image width and height -->
+<style type="text/css">
+img {    
+  max-height: 660px;    
+  max-width: 1020px;
+}
+</style>
+ 
+<!-- Center image on slide -->
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+$(function() {    
+  $("p:has(img)").addClass('centered');
+});
+</script>
 
 ## A Data Science Toolkit
 
@@ -31,7 +47,7 @@ We'll probably want to build this out with names and logos and stuff
 
 [CW Dillon](http://www.css.gmu.edu/?q=node/15) 
 
-for _2014 MORS Symposium_, WG...
+for _2014 MORS Symposium_, WG {29, 33}
 </small>
 
 
@@ -44,64 +60,65 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Introduction and Outline
 
-1. Why do we care about data?
+1. Why do we care about data science?
 1. What do we mean by _Data Science_?
 1. Describing the _Industrial Data Flow_
 1. Resources for your next steps
 
----
-
-### Themes
-
-* Ecosystems of tools 
- - Open Source ecosystem
- - Windows ecosystem
-* Relevance to _process_ steps
-* Relevence to _big data_ 
- - yah, we know you were thinking about it...
- - ...sigh...
-
 
 --- &vertical
 
-### Why Do We Care About Data?
+### Why Do We Care About Data Science?
+* Growth of data
+* Confluence of...
+ - Statistics
+ - Programming (hacking)
+ - "Soft skills"
+* Production of insights 
+
+****
+
+### Growth of Data
+
+![Growth of Data](assets/img/DataGrowth.png "yes, that's really a lot of kitten pictures, but do they come from the same lady?")
+Growth of Data[1]
 
 
 ****
 
-### These slides go down
+### Data Science Venn Diagram
+
+![Data Science Venn Diagram---Enhanced](assets/img/VennDiagram2.png "just kidding! ...don't drone me, man")
 
 
 *** 
 
-### And This, Too
 
-* Any slide under three astrisks is another verticle slide
-* End it (start the next horizontal slide) with three dashes
 
----
+### Data Process
 
-### Like this...
+* Reproducibility is much of what makes this a _science_
+* Using the toolkit for end-to-end production of insights
+* 
+
 
 
 --- &vertical
 
-### Data Science
+### Presentation Themes 
 
-Data science is _NOT_ just a new name for statistics, but a confluence of
+* Ecosystems
+ - O'reilly/Strata Salary Survey, 2013
+ - Kaggle Competition Entries, 2012
+* Process Steps
+ - CRISP-DM
+ - Production Line
+* Big Data
+ - This presentation is _NOT//NOT_ about big data
+ - but, these tools are necessary for big data
+ - continuous repetition
 
-1. Statistics
-1. Programming
-1. Subject-matter Expertise
-
-
-*** 
-
-*THE* venn diagram of data science goes here
-
-<small>Drew Conway, wasn't it...</small>
-
-****
+***
 
 ### Stats
 
@@ -110,9 +127,9 @@ Data science is _NOT_ just a new name for statistics, but a confluence of
 * OS Ecosystem:
  - R, Python, Octave
 * $ Ecosystem:
- - Revolution R, SAS/JMP, Matlab
+ - SAS/JMP, Matlab, Stata
 * Windows Ecosystem:
- -R, Python, 
+ -R, Python, Tableau, NetworkX
 
 <small> source</small>
 
@@ -136,6 +153,19 @@ Data science is _NOT_ just a new name for statistics, but a confluence of
 
 * What to calculate, what it means
 * 
+
+
+---
+
+### Themes
+
+* Ecosystems of tools 
+ - Open Source ecosystem
+ - Windows ecosystem
+* Relevance to _process_ steps
+* Relevence to _big data_ 
+ - yah, we know you were thinking about it...
+ - ...sigh...
 
 ---
 
@@ -316,6 +346,12 @@ compare whisker plots with jittered plots: image
 
 ---
 
+### References
+[1]: http://somesite.net "Where Did This Come From?"
+[2]: http://oreilly.strata.com/salary-survey-or-something "Strata"
+[3]: http://kaggle.org "Kaggle Blog"
+
+---
 ### Contacting Us
 
 * Michael A Smith

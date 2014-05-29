@@ -26,6 +26,201 @@ $(function() {
 });
 </script>
 
+<!-- Make slides printable to pdf from Chrome browsers -->
+
+<script type="text/javascript">
+/* Default Print Stylesheet Template
+by Rob Glazebrook of CSSnewbie.com
+Last Updated: June 4, 2008
+
+Feel free (nay, compelled) to edit, append, and
+manipulate this file as you see fit. */
+
+
+/* SECTION 1: Set default width, margin, float, and
+background. This prevents elements from extending
+beyond the edge of the printed page, and prevents
+unnecessary background images from printing */
+
+* {
+-webkit-print-color-adjust: exact;
+}
+
+body {
+font-size: 18pt;
+width: 297mm;
+height: 229mm;
+margin: 0 auto !important;
+border: 0;
+padding: 0;
+float: none !important;
+overflow: visible;
+}
+
+html {
+width: 100%;
+height: 100%;
+overflow: visible;
+}
+
+@page {
+size: letter landscape;
+margin: 0;
+}
+
+/* SECTION 2: Remove any elements not needed in print.
+This would include navigation, ads, sidebars, etc. */
+.nestedarrow,
+.controls,
+.reveal .progress,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+display: none !important;
+}
+
+/* SECTION 3: Set body font face, size, and color.
+Consider using a serif font for readability. */
+body, p, td, li, div {
+font-size: 18pt;
+}
+
+/* SECTION 4: Set heading font face, sizes, and color.
+Differentiate your headings from your body text.
+Perhaps use a large sans-serif for distinction. */
+h1,h2,h3,h4,h5,h6 {
+text-shadow: 0 0 0 #000 !important;
+}
+
+/* SECTION 5: Make hyperlinks more usable.
+Ensure links are underlined, and consider appending
+the URL to the end of the link for usability. */
+a:link,
+a:visited {
+font-weight: normal;
+text-decoration: underline;
+}
+
+.reveal pre code {
+overflow: hidden !important;
+font-family: monospace !important;
+}
+
+
+/* SECTION 6: more reveal.js specific additions by @skypanther */
+ul, ol, div, p {
+visibility: visible;
+position: static;
+width: auto;
+height: auto;
+display: block;
+overflow: visible;
+margin: auto;
+}
+.reveal {
+width: auto !important;
+height: auto !important;
+overflow: hidden !important;
+}
+.reveal .slides {
+position: static;
+width: 100%;
+height: auto;
+
+left: auto;
+top: auto;
+margin: 0 !important;
+padding: 0 !important;
+
+overflow: visible;
+display: block;
+
+text-align: center;
+
+-webkit-perspective: none;
+-moz-perspective: none;
+-ms-perspective: none;
+perspective: none;
+
+-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+-moz-perspective-origin: 50% 50%;
+-ms-perspective-origin: 50% 50%;
+perspective-origin: 50% 50%;
+}
+.reveal .slides section {
+
+page-break-after: always !important;
+
+visibility: visible !important;
+position: relative !important;
+width: 100% !important;
+height: 229mm !important;
+min-height: 229mm !important;
+display: block !important;
+overflow: hidden !important;
+
+left: 0 !important;
+top: 0 !important;
+margin: 0 !important;
+padding: 2cm 2cm 0 2cm !important;
+box-sizing: border-box !important;
+
+opacity: 1 !important;
+
+-webkit-transform-style: flat !important;
+-moz-transform-style: flat !important;
+-ms-transform-style: flat !important;
+transform-style: flat !important;
+
+-webkit-transform: none !important;
+-moz-transform: none !important;
+-ms-transform: none !important;
+transform: none !important;
+}
+.reveal section.stack {
+margin: 0 !important;
+padding: 0 !important;
+page-break-after: avoid !important;
+height: auto !important;
+min-height: auto !important;
+}
+.reveal .absolute-element {
+margin-left: 2.2cm;
+margin-top: 1.8cm;
+}
+.reveal section .fragment {
+opacity: 1 !important;
+visibility: visible !important;
+
+-webkit-transform: none !important;
+-moz-transform: none !important;
+-ms-transform: none !important;
+transform: none !important;
+}
+.reveal section .slide-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 0;
+}
+.reveal section>* {
+position: relative;
+z-index: 1;
+}
+.reveal img {
+box-shadow: none;
+}
+.reveal .roll {
+overflow: visible;
+line-height: 1em;
+}
+.reveal small a {
+font-size: 16pt !important;
+}
+</script>
+
 ## A Data Science Toolkit
 
    
@@ -60,20 +255,18 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Introduction and Outline
 
-1. Why do we care about data science?
-1. What do we mean by _Data Science_?
+1. Why we care about _Data Science_
+1. Themes used throughout this presentation
 1. Describing the _Industrial Data Flow_
 1. Resources for your next steps
 
-
 --- &vertical
 
-### Why Do We Care About Data Science?
-* Growth of data
-* Confluence of...
- - Statistics
- - Programming (hacking)
- - "Soft skills"
+### Why We Care About Data Science
+
+* There's so much data!
+* Confluence of disciplines
+* Reproducibility 
 * Production of insights 
 
 ****
@@ -93,39 +286,52 @@ Growth of Data[1]
 
 *** 
 
+### Reproducibility
 
+* Reproducibility vs Replicable
+* Closest we can do with social data
+ - not _completely_ scientific
+ - better than nothing 
+* Necessary for next set of data 
+ - Do you need (or deserve) an API? 
+ 
+ 
+***
 
 ### Data Process
 
 * Reproducibility is much of what makes this a _science_
 * Using the toolkit for end-to-end production of insights
-* 
-
+* What we share should take us from raw data to final product 
 
 
 --- &vertical
 
 ### Presentation Themes 
 
-* Ecosystems
- - O'reilly/Strata Salary Survey, 2013
- - Kaggle Competition Entries, 2012
-* Process Steps
- - CRISP-DM
+* Ecosystems of tools
+ - O'reilly/Strata Salary Survey, 2013 [2]
+ - Kaggle Competition Entries, 2012 [3]
+* Process Steps 
+ - CRISP-DM [4]
  - Production Line
 * Big Data
  - This presentation is _NOT//NOT_ about big data
  - but, these tools are necessary for big data
  - continuous repetition
+* Team-oriented
+ - Process-aware specialists
+ - Area expertise 
 
 ***
 
-### Stats
+### Statistics
 
 * Right tool for the job
- - Friends don't let friends use Excel for stats
+ - Friends don't let friends use Excel for stats [5]
+ - Pick the ecosystem that's right for you
 * OS Ecosystem:
- - R, Python, Octave
+ - R, Python, Octave, ...
 * $ Ecosystem:
  - SAS/JMP, Matlab, Stata
 * Windows Ecosystem:
@@ -139,7 +345,7 @@ Growth of Data[1]
 
 * *nix environments (OSX, Linux)
  - C/C++, 
- - R (RCPP package)
+ - R (RCPP)
  - Python
  - JavaScript (Node)
  - Never seen anything done in ObjectiveC
@@ -152,45 +358,38 @@ Growth of Data[1]
 ### Subject-Matter Expertise
 
 * What to calculate, what it means
-* 
+* Why Soft Skills Matter [7]
 
-
----
-
-### Themes
-
-* Ecosystems of tools 
- - Open Source ecosystem
- - Windows ecosystem
-* Relevance to _process_ steps
-* Relevence to _big data_ 
- - yah, we know you were thinking about it...
- - ...sigh...
 
 ---
 
 ### Process
 
-* Inputs
+* Acquire
 * Clean
-* Explore
-* Model
-* Products
+* Explore and Visualize
+* Model and Analyze
+* Products and Publications
 
 --- &vertical
 
-### Process Inputs
+### Data Acquisition
 
-* Data Sources
+* Data sources
+ - APIs
 * Big data 
+ - (that's the last time we talk about it)
 * Provenance
+* Keep a copy of the raw data
 
 *** 
 
 ### Sources
 
 * Accessibility
+ - APIs
 * Freedom
+
 
 ***
 
@@ -200,7 +399,9 @@ Growth of Data[1]
 * Map-Reduce
 * Importance of _repeatable_ processes
 * Documenting processes 
-
+ - including cleaning the raw data
+ 
+ 
 *** 
 
 ### Provenance
@@ -209,13 +410,14 @@ Growth of Data[1]
 * Where did it come from
 * Where did they get it
 
+
 --- &vertical
 
 ### Cleaning Data
 
 * Standardization
 * Missing values
-* 
+
 
 *** 
 
@@ -228,13 +430,21 @@ Growth of Data[1]
   - C. W. Dillion
  - (FI {+ iff MI} + Levenstein distance < 3 in Lastname)
 * Translating Units of Measure
-* 
+
+***
  
+### Missing Values
+
+* Filter out record with missing values
+* Simulate missing values
+* Replace with 0
+
+
 --- &vertical
 
 ### Explore Data
 
-* Exploratory 
+* Exploratory statistics (summary stats)
 * Exploratory visualization
 * Volume (size and extent)
 * Shape
@@ -249,7 +459,7 @@ Growth of Data[1]
 * Shape
  - Long, sparse
  - Tabular, nested
-* 
+
 
 ***
  
@@ -257,19 +467,23 @@ Growth of Data[1]
 
 * Lattice
 * Interactive 
+* ggplot2
 
 ***
 
 ### Exploratory Stats
 
+* Summary statistics
+ - Measures of central tendency
 * Auto Regression
-* Measures of central tendency
 
 ***
 
 ### Problems with Summary Stats
 
-compare whisker plots with jittered plots: image
+Compare the whisker plots with jitters
+
+![Jitters vs Whiskers](/assets/summaryPlot.png)
 
 
 --- &vertical
@@ -277,7 +491,8 @@ compare whisker plots with jittered plots: image
 ### Models & Analysis
 
 * This is the 'secret sauce' for your data product
-* 
+* Demonstrate the insight(s) from exploration and analysis
+
 
 ***
 
@@ -328,7 +543,8 @@ compare whisker plots with jittered plots: image
 * Why
 * How
  - automated API tools
- 
+
+
 ---
 
 ### Resources for More Info
@@ -346,12 +562,25 @@ compare whisker plots with jittered plots: image
 
 ---
 
+### Conclusion 
+
+* Data Science is not just 'applied statistics'
+ - Reproduciblity (scripted processes)
+ - Subject-matter Expertise, aka _Soft Skills_
+* Toolkits make Data Science scalable, extensible
+* Insights are the value added (not just data munging)
+* Team-oriented
+
+---
+
 ### References
+
 [1]: http://somesite.net "Where Did This Come From?"
 [2]: http://oreilly.strata.com/salary-survey-or-something "Strata"
 [3]: http://kaggle.org "Kaggle Blog"
 
 ---
+
 ### Contacting Us
 
 * Michael A Smith

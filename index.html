@@ -41,6 +41,201 @@ $(function() {
 });
 </script>
 
+<!-- Make slides printable to pdf from Chrome browsers -->
+
+<script type="text/javascript">
+/* Default Print Stylesheet Template
+by Rob Glazebrook of CSSnewbie.com
+Last Updated: June 4, 2008
+
+Feel free (nay, compelled) to edit, append, and
+manipulate this file as you see fit. */
+
+
+/* SECTION 1: Set default width, margin, float, and
+background. This prevents elements from extending
+beyond the edge of the printed page, and prevents
+unnecessary background images from printing */
+
+* {
+-webkit-print-color-adjust: exact;
+}
+
+body {
+font-size: 18pt;
+width: 297mm;
+height: 229mm;
+margin: 0 auto !important;
+border: 0;
+padding: 0;
+float: none !important;
+overflow: visible;
+}
+
+html {
+width: 100%;
+height: 100%;
+overflow: visible;
+}
+
+@page {
+size: letter landscape;
+margin: 0;
+}
+
+/* SECTION 2: Remove any elements not needed in print.
+This would include navigation, ads, sidebars, etc. */
+.nestedarrow,
+.controls,
+.reveal .progress,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+display: none !important;
+}
+
+/* SECTION 3: Set body font face, size, and color.
+Consider using a serif font for readability. */
+body, p, td, li, div {
+font-size: 18pt;
+}
+
+/* SECTION 4: Set heading font face, sizes, and color.
+Differentiate your headings from your body text.
+Perhaps use a large sans-serif for distinction. */
+h1,h2,h3,h4,h5,h6 {
+text-shadow: 0 0 0 #000 !important;
+}
+
+/* SECTION 5: Make hyperlinks more usable.
+Ensure links are underlined, and consider appending
+the URL to the end of the link for usability. */
+a:link,
+a:visited {
+font-weight: normal;
+text-decoration: underline;
+}
+
+.reveal pre code {
+overflow: hidden !important;
+font-family: monospace !important;
+}
+
+
+/* SECTION 6: more reveal.js specific additions by @skypanther */
+ul, ol, div, p {
+visibility: visible;
+position: static;
+width: auto;
+height: auto;
+display: block;
+overflow: visible;
+margin: auto;
+}
+.reveal {
+width: auto !important;
+height: auto !important;
+overflow: hidden !important;
+}
+.reveal .slides {
+position: static;
+width: 100%;
+height: auto;
+
+left: auto;
+top: auto;
+margin: 0 !important;
+padding: 0 !important;
+
+overflow: visible;
+display: block;
+
+text-align: center;
+
+-webkit-perspective: none;
+-moz-perspective: none;
+-ms-perspective: none;
+perspective: none;
+
+-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+-moz-perspective-origin: 50% 50%;
+-ms-perspective-origin: 50% 50%;
+perspective-origin: 50% 50%;
+}
+.reveal .slides section {
+
+page-break-after: always !important;
+
+visibility: visible !important;
+position: relative !important;
+width: 100% !important;
+height: 229mm !important;
+min-height: 229mm !important;
+display: block !important;
+overflow: hidden !important;
+
+left: 0 !important;
+top: 0 !important;
+margin: 0 !important;
+padding: 2cm 2cm 0 2cm !important;
+box-sizing: border-box !important;
+
+opacity: 1 !important;
+
+-webkit-transform-style: flat !important;
+-moz-transform-style: flat !important;
+-ms-transform-style: flat !important;
+transform-style: flat !important;
+
+-webkit-transform: none !important;
+-moz-transform: none !important;
+-ms-transform: none !important;
+transform: none !important;
+}
+.reveal section.stack {
+margin: 0 !important;
+padding: 0 !important;
+page-break-after: avoid !important;
+height: auto !important;
+min-height: auto !important;
+}
+.reveal .absolute-element {
+margin-left: 2.2cm;
+margin-top: 1.8cm;
+}
+.reveal section .fragment {
+opacity: 1 !important;
+visibility: visible !important;
+
+-webkit-transform: none !important;
+-moz-transform: none !important;
+-ms-transform: none !important;
+transform: none !important;
+}
+.reveal section .slide-background {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 0;
+}
+.reveal section>* {
+position: relative;
+z-index: 1;
+}
+.reveal img {
+box-shadow: none;
+}
+.reveal .roll {
+overflow: visible;
+line-height: 1em;
+}
+.reveal small a {
+font-size: 16pt !important;
+}
+</script>
+
 <h2>A Data Science Toolkit</h2>
 
 <p></br>   </p>
@@ -72,8 +267,8 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
 <section class='class' data-state='' id='id'>
   <h3>Introduction and Outline</h3>
   <ol>
-<li>Why do we care about data science?</li>
-<li>What do we mean by <em>Data Science</em>?</li>
+<li>Why we care about <em>Data Science</em></li>
+<li>Themes used throughout this presentation</li>
 <li>Describing the <em>Industrial Data Flow</em></li>
 <li>Resources for your next steps</li>
 </ol>
@@ -81,16 +276,11 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
 </section>
 <section>
    <section class='' data-state=''>
-    <h3>Why Do We Care About Data Science?</h3>
+    <h3>Why We Care About Data Science</h3>
     <ul>
-<li>Growth of data</li>
-<li>Confluence of...
-
-<ul>
-<li>Statistics</li>
-<li>Programming (hacking)</li>
-<li>&quot;Soft skills&quot;</li>
-</ul></li>
+<li>There&#39;s so much data!</li>
+<li>Confluence of disciplines</li>
+<li>Reproducibility </li>
 <li>Production of insights </li>
 </ul>
 
@@ -118,12 +308,34 @@ Growth of Data[1]</p>
     </aside>
    </section>
    <section class='' data-state=''>
+    <h3>Reproducibility</h3>
+
+<ul>
+<li>Reproducibility vs Replicable</li>
+<li>Closest we can do with social data
+
+<ul>
+<li>not <em>completely</em> scientific</li>
+<li>better than nothing </li>
+</ul></li>
+<li>Necessary for next set of data 
+
+<ul>
+<li>Do you need (or deserve) an API? </li>
+</ul></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
     <h3>Data Process</h3>
 
 <ul>
 <li>Reproducibility is much of what makes this a <em>science</em></li>
 <li>Using the toolkit for end-to-end production of insights</li>
-<li></li>
+<li>What we share should take us from raw data to final product </li>
 </ul>
 
     <aside class='notes'>
@@ -135,16 +347,16 @@ Growth of Data[1]</p>
    <section class='' data-state=''>
     <h3>Presentation Themes</h3>
     <ul>
-<li>Ecosystems
+<li>Ecosystems of tools
 
 <ul>
-<li>O&#39;reilly/Strata Salary Survey, 2013</li>
-<li>Kaggle Competition Entries, 2012</li>
+<li>O&#39;reilly/Strata Salary Survey, 2013 [2]</li>
+<li>Kaggle Competition Entries, 2012 [3]</li>
 </ul></li>
-<li>Process Steps
+<li>Process Steps 
 
 <ul>
-<li>CRISP-DM</li>
+<li>CRISP-DM [4]</li>
 <li>Production Line</li>
 </ul></li>
 <li>Big Data
@@ -154,6 +366,12 @@ Growth of Data[1]</p>
 <li>but, these tools are necessary for big data</li>
 <li>continuous repetition</li>
 </ul></li>
+<li>Team-oriented
+
+<ul>
+<li>Process-aware specialists</li>
+<li>Area expertise </li>
+</ul></li>
 </ul>
 
     <aside class='notes'>
@@ -161,18 +379,19 @@ Growth of Data[1]</p>
     </aside>
    </section>
    <section class='' data-state=''>
-    <h3>Stats</h3>
+    <h3>Statistics</h3>
 
 <ul>
 <li>Right tool for the job
 
 <ul>
-<li>Friends don&#39;t let friends use Excel for stats</li>
+<li>Friends don&#39;t let friends use Excel for stats [5]</li>
+<li>Pick the ecosystem that&#39;s right for you</li>
 </ul></li>
 <li>OS Ecosystem:
 
 <ul>
-<li>R, Python, Octave</li>
+<li>R, Python, Octave, ...</li>
 </ul></li>
 <li>$ Ecosystem:
 
@@ -197,7 +416,7 @@ Growth of Data[1]</p>
 
 <ul>
 <li>C/C++, </li>
-<li>R (RCPP package)</li>
+<li>R (RCPP)</li>
 <li>Python</li>
 <li>JavaScript (Node)</li>
 <li>Never seen anything done in ObjectiveC</li>
@@ -219,7 +438,7 @@ Growth of Data[1]</p>
 
 <ul>
 <li>What to calculate, what it means</li>
-<li></li>
+<li>Why Soft Skills Matter [7]</li>
 </ul>
 
     <aside class='notes'>
@@ -228,42 +447,32 @@ Growth of Data[1]</p>
    </section>
 </section>
 <section class='' data-state='' id='slide-5'>
-  <h3>Themes</h3>
-  <ul>
-<li>Ecosystems of tools 
-
-<ul>
-<li>Open Source ecosystem</li>
-<li>Windows ecosystem</li>
-</ul></li>
-<li>Relevance to <em>process</em> steps</li>
-<li>Relevence to <em>big data</em> 
-
-<ul>
-<li>yah, we know you were thinking about it...</li>
-<li>...sigh...</li>
-</ul></li>
-</ul>
-
-</section>
-<section class='' data-state='' id='slide-6'>
   <h3>Process</h3>
   <ul>
-<li>Inputs</li>
+<li>Acquire</li>
 <li>Clean</li>
-<li>Explore</li>
-<li>Model</li>
-<li>Products</li>
+<li>Explore and Visualize</li>
+<li>Model and Analyze</li>
+<li>Products and Publications</li>
 </ul>
 
 </section>
 <section>
    <section class='' data-state=''>
-    <h3>Process Inputs</h3>
+    <h3>Data Acquisition</h3>
     <ul>
-<li>Data Sources</li>
-<li>Big data </li>
+<li>Data sources
+
+<ul>
+<li>APIs</li>
+</ul></li>
+<li>Big data 
+
+<ul>
+<li>(that&#39;s the last time we talk about it)</li>
+</ul></li>
 <li>Provenance</li>
+<li>Keep a copy of the raw data</li>
 </ul>
 
     <aside class='notes'>
@@ -274,7 +483,11 @@ Growth of Data[1]</p>
     <h3>Sources</h3>
 
 <ul>
-<li>Accessibility</li>
+<li>Accessibility
+
+<ul>
+<li>APIs</li>
+</ul></li>
 <li>Freedom</li>
 </ul>
 
@@ -289,7 +502,11 @@ Growth of Data[1]</p>
 <li>Flows</li>
 <li>Map-Reduce</li>
 <li>Importance of <em>repeatable</em> processes</li>
-<li>Documenting processes </li>
+<li>Documenting processes 
+
+<ul>
+<li>including cleaning the raw data</li>
+</ul></li>
 </ul>
 
     <aside class='notes'>
@@ -316,7 +533,6 @@ Growth of Data[1]</p>
     <ul>
 <li>Standardization</li>
 <li>Missing values</li>
-<li></li>
 </ul>
 
     <aside class='notes'>
@@ -337,15 +553,31 @@ Growth of Data[1]</p>
 <li>(FI {+ iff MI} + Levenstein distance &lt; 3 in Lastname)</li>
 </ul></li>
 <li>Translating Units of Measure</li>
-<li></li>
 </ul>
 
-<p>--- &amp;vertical</p>
-
-<h3>Explore Data</h3>
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Missing Values</h3>
 
 <ul>
-<li>Exploratory </li>
+<li>Filter out record with missing values</li>
+<li>Simulate missing values</li>
+<li>Replace with 0</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h3>Explore Data</h3>
+    <ul>
+<li>Exploratory statistics (summary stats)</li>
 <li>Exploratory visualization</li>
 <li>Volume (size and extent)</li>
 <li>Shape</li>
@@ -371,7 +603,6 @@ Growth of Data[1]</p>
 <li>Long, sparse</li>
 <li>Tabular, nested</li>
 </ul></li>
-<li></li>
 </ul>
 
     <aside class='notes'>
@@ -384,6 +615,7 @@ Growth of Data[1]</p>
 <ul>
 <li>Lattice</li>
 <li>Interactive </li>
+<li>ggplot2</li>
 </ul>
 
     <aside class='notes'>
@@ -394,8 +626,12 @@ Growth of Data[1]</p>
     <h3>Exploratory Stats</h3>
 
 <ul>
-<li>Auto Regression</li>
+<li>Summary statistics
+
+<ul>
 <li>Measures of central tendency</li>
+</ul></li>
+<li>Auto Regression</li>
 </ul>
 
     <aside class='notes'>
@@ -405,7 +641,9 @@ Growth of Data[1]</p>
    <section class='' data-state=''>
     <h3>Problems with Summary Stats</h3>
 
-<p>compare whisker plots with jittered plots: image</p>
+<p>Compare the whisker plots with jitters</p>
+
+<p><img src="/assets/summaryPlot.png" alt="Jitters vs Whiskers"></p>
 
     <aside class='notes'>
       
@@ -417,7 +655,7 @@ Growth of Data[1]</p>
     <h3>Models &amp; Analysis</h3>
     <ul>
 <li>This is the &#39;secret sauce&#39; for your data product</li>
-<li></li>
+<li>Demonstrate the insight(s) from exploration and analysis</li>
 </ul>
 
     <aside class='notes'>
@@ -505,11 +743,14 @@ Growth of Data[1]</p>
 </ul></li>
 </ul>
 
-<hr>
-
-<h3>Resources for More Info</h3>
-
-<ul>
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-11'>
+  <h3>Resources for More Info</h3>
+  <ul>
 <li>Local University Education
 
 <ul>
@@ -531,16 +772,27 @@ Growth of Data[1]</p>
 </ul></li>
 </ul>
 
-    <aside class='notes'>
-      
-    </aside>
-   </section>
 </section>
-<section class='' data-state='' id='slide-11'>
+<section class='' data-state='' id='slide-12'>
+  <h3>Conclusion</h3>
+  <ul>
+<li>Data Science is not just &#39;applied statistics&#39;
+
+<ul>
+<li>Reproduciblity (scripted processes)</li>
+<li>Subject-matter Expertise, aka <em>Soft Skills</em></li>
+</ul></li>
+<li>Toolkits make Data Science scalable, extensible</li>
+<li>Insights are the value added (not just data munging)</li>
+<li>Team-oriented</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-13'>
   <h3>References</h3>
   
 </section>
-<section class='' data-state='' id='slide-12'>
+<section class='' data-state='' id='slide-14'>
   <h3>Contacting Us</h3>
   <ul>
 <li>Michael A Smith

@@ -13,10 +13,7 @@ hitheme     : tomorrow # {tomorrow}
 widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 assets:
-  js:
-    - "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
-    - "http://bartaz.github.io/sandbox.js/jquery.highlight.js"
-
+  css    : "libraries/frameworks/revealjs/css/print/pdf.css" 
 ---
 
 <!-- Limit image width and height -->

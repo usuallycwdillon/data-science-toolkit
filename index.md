@@ -4,12 +4,21 @@ subtitle    : Presentation to MORSS WG33 and WG28
 author      : Michael A. Smith and Clarence W. Dillon
 job         : MORSS 2014
 framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
-highlighter : highlight  # {highlight.js, prettify, highlight}
-hitheme     : solarized_light # {tomorrow} 
+revealjs : 
+  theme  : solarized #{sky,beige,simple,serif,night,default,solarized,moon}
+  transition: cube # {none, page, concave, zoom, linear, fade, default}
+  center : "false"
+highlighter : prettify  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow # {tomorrow} 
 widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
+assets:
+  js:
+    - "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
+    - "http://bartaz.github.io/sandbox.js/jquery.highlight.js"
 
 ---
+
 <!-- Limit image width and height -->
 <style type="text/css">
 img {    
@@ -26,200 +35,6 @@ $(function() {
 });
 </script>
 
-<!-- Make slides printable to pdf from Chrome browsers -->
-
-<script type="text/javascript">
-/* Default Print Stylesheet Template
-by Rob Glazebrook of CSSnewbie.com
-Last Updated: June 4, 2008
-
-Feel free (nay, compelled) to edit, append, and
-manipulate this file as you see fit. */
-
-
-/* SECTION 1: Set default width, margin, float, and
-background. This prevents elements from extending
-beyond the edge of the printed page, and prevents
-unnecessary background images from printing */
-
-* {
--webkit-print-color-adjust: exact;
-}
-
-body {
-font-size: 18pt;
-width: 297mm;
-height: 229mm;
-margin: 0 auto !important;
-border: 0;
-padding: 0;
-float: none !important;
-overflow: visible;
-}
-
-html {
-width: 100%;
-height: 100%;
-overflow: visible;
-}
-
-@page {
-size: letter landscape;
-margin: 0;
-}
-
-/* SECTION 2: Remove any elements not needed in print.
-This would include navigation, ads, sidebars, etc. */
-.nestedarrow,
-.controls,
-.reveal .progress,
-.reveal.overview,
-.fork-reveal,
-.share-reveal,
-.state-background {
-display: none !important;
-}
-
-/* SECTION 3: Set body font face, size, and color.
-Consider using a serif font for readability. */
-body, p, td, li, div {
-font-size: 18pt;
-}
-
-/* SECTION 4: Set heading font face, sizes, and color.
-Differentiate your headings from your body text.
-Perhaps use a large sans-serif for distinction. */
-h1,h2,h3,h4,h5,h6 {
-text-shadow: 0 0 0 #000 !important;
-}
-
-/* SECTION 5: Make hyperlinks more usable.
-Ensure links are underlined, and consider appending
-the URL to the end of the link for usability. */
-a:link,
-a:visited {
-font-weight: normal;
-text-decoration: underline;
-}
-
-.reveal pre code {
-overflow: hidden !important;
-font-family: monospace !important;
-}
-
-
-/* SECTION 6: more reveal.js specific additions by @skypanther */
-ul, ol, div, p {
-visibility: visible;
-position: static;
-width: auto;
-height: auto;
-display: block;
-overflow: visible;
-margin: auto;
-}
-.reveal {
-width: auto !important;
-height: auto !important;
-overflow: hidden !important;
-}
-.reveal .slides {
-position: static;
-width: 100%;
-height: auto;
-
-left: auto;
-top: auto;
-margin: 0 !important;
-padding: 0 !important;
-
-overflow: visible;
-display: block;
-
-text-align: center;
-
--webkit-perspective: none;
--moz-perspective: none;
--ms-perspective: none;
-perspective: none;
-
--webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
--moz-perspective-origin: 50% 50%;
--ms-perspective-origin: 50% 50%;
-perspective-origin: 50% 50%;
-}
-.reveal .slides section {
-
-page-break-after: always !important;
-
-visibility: visible !important;
-position: relative !important;
-width: 100% !important;
-height: 229mm !important;
-min-height: 229mm !important;
-display: block !important;
-overflow: hidden !important;
-
-left: 0 !important;
-top: 0 !important;
-margin: 0 !important;
-padding: 2cm 2cm 0 2cm !important;
-box-sizing: border-box !important;
-
-opacity: 1 !important;
-
--webkit-transform-style: flat !important;
--moz-transform-style: flat !important;
--ms-transform-style: flat !important;
-transform-style: flat !important;
-
--webkit-transform: none !important;
--moz-transform: none !important;
--ms-transform: none !important;
-transform: none !important;
-}
-.reveal section.stack {
-margin: 0 !important;
-padding: 0 !important;
-page-break-after: avoid !important;
-height: auto !important;
-min-height: auto !important;
-}
-.reveal .absolute-element {
-margin-left: 2.2cm;
-margin-top: 1.8cm;
-}
-.reveal section .fragment {
-opacity: 1 !important;
-visibility: visible !important;
-
--webkit-transform: none !important;
--moz-transform: none !important;
--ms-transform: none !important;
-transform: none !important;
-}
-.reveal section .slide-background {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 0;
-}
-.reveal section>* {
-position: relative;
-z-index: 1;
-}
-.reveal img {
-box-shadow: none;
-}
-.reveal .roll {
-overflow: visible;
-line-height: 1em;
-}
-.reveal small a {
-font-size: 16pt !important;
-}
-</script>
 
 ## A Data Science Toolkit
 
@@ -264,16 +79,29 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Why We Care About Data Science
 
-* There's so much data!
+* Currently trending
+* There's so much more data now!
 * Confluence of disciplines
+* Production of insights and methods
 * Reproducibility 
-* Production of insights 
 
 ****
 
-### Growth of Data
+### New Popularity of Data Science
 
-![Growth of Data](assets/img/DataGrowth.png "yes, that's really a lot of kitten pictures, but do they come from the same lady?")
+* A (new) way to integrate perspectives
+* A way to leverage computer power
+ - Speed, Volume, Reliability, Consistency
+ - Processing power, parallelization
+* Applied Science 
+ 
+ 
+****
+
+### Growth of Data Availability
+
+![Growth of Data](assets/img/wapo_dataGrowth.jpg "yes, that's really a lot of kitten pictures, but do they come from the same lady?") 
+
 Growth of Data[1]
 
 
@@ -309,16 +137,15 @@ Growth of Data[1]
 
 ### Presentation Themes 
 
-* Ecosystems of tools
+* Ecosystems of (software) tools 
  - O'reilly/Strata Salary Survey, 2013 [2]
  - Kaggle Competition Entries, 2012 [3]
 * Process Steps 
  - CRISP-DM [4]
- - Production Line
+ - Data Science as building a production line
 * Big Data
  - This presentation is _NOT//NOT_ about big data
  - but, these tools are necessary for big data
- - continuous repetition
 * Team-oriented
  - Process-aware specialists
  - Area expertise 
@@ -344,20 +171,21 @@ Growth of Data[1]
 ### Programming
 
 * *nix environments (OSX, Linux)
- - C/C++, 
+ - C/C++ 
  - R (RCPP)
  - Python
  - JavaScript (Node)
- - Never seen anything done in ObjectiveC
 * Windows
- - C#
- - VB.Net
+ - C#/VB.Net
+ - Tableau
  
 ***
 
 ### Subject-Matter Expertise
 
-* What to calculate, what it means
+* What to calculate 
+ - What it means
+ - How to approach a problem
 * Why Soft Skills Matter [7]
 
 
@@ -376,30 +204,36 @@ Growth of Data[1]
 ### Data Acquisition
 
 * Data sources
+ - Repositories
  - APIs
 * Big data 
  - (that's the last time we talk about it)
 * Provenance
 * Keep a copy of the raw data
 
+
 *** 
 
 ### Sources
 
+* Warehouses & Repos
 * Accessibility
  - APIs
 * Freedom
+ - Lower the bar for entry
+ - Invite discussion, validation, improvement
 
 
 ***
 
 ### Big Data
 
-* Flows
-* Map-Reduce
+* Good data science is prerequisite to big data
 * Importance of _repeatable_ processes
-* Documenting processes 
- - including cleaning the raw data
+ - Map-Reduce
+ - Process a data flow
+* Like water treatment or electricity production
+ - Data science == engineering the plant
  
  
 *** 
@@ -416,6 +250,8 @@ Growth of Data[1]
 ### Cleaning Data
 
 * Standardization
+ - Mispellings, Initials
+ - Levenstein distance
 * Missing values
 
 
@@ -429,9 +265,12 @@ Growth of Data[1]
   - Clarence W Dillon
   - C. W. Dillion
  - (FI {+ iff MI} + Levenstein distance < 3 in Lastname)
+ - Differences in code lengths [8]
 * Translating Units of Measure
 
-***
+*** =pnotes
+
+
  
 ### Missing Values
 
@@ -460,7 +299,6 @@ Growth of Data[1]
  - Long, sparse
  - Tabular, nested
 
-
 ***
  
 ### Exploratory Viz
@@ -468,6 +306,8 @@ Growth of Data[1]
 * Lattice
 * Interactive 
 * ggplot2
+* network plots
+
 
 ***
 
@@ -476,6 +316,7 @@ Growth of Data[1]
 * Summary statistics
  - Measures of central tendency
 * Auto Regression
+
 
 ***
 
@@ -498,14 +339,12 @@ Compare the whisker plots with jitters
 
 ### Regression
 
-* What matters?
+* Identifying dependent and independent factors
+* Lingua Franca of statistical relationships
+ - Correlation, way to deal with multiple factors
+ - Reliable quantitative method to contextualize results
+* First step in predictive statistics 
 
-
-***
-
-### Fit
-
-* Quality control
 
 --- &vertical
 
@@ -522,9 +361,10 @@ Compare the whisker plots with jitters
 ### Reproducable research
 
 * You care because you value your own time/data
-* ...or don't you?
-* Share the code as well as the data
-* 
+ - ...or don't you?
+ - Can you reproduce your own work 6 months later?
+* Share the code as well as the raw data
+* This is a science of building the assembly line as much as the products
 
 
 ***
@@ -532,8 +372,14 @@ Compare the whisker plots with jitters
 ### Data Products
 
 * Think of this as the packaging step for manufactured products
-* Documentation
-* 
+* Documentation is like the instruction manaual 
+* Publication of reports
+ - LaTeX and Sweave for printables
+ - Markdown and javascript for the web
+* Publication of data
+ - CSV, text or other open format
+ - Raw and processed data as well as results
+
 
 ***
 
@@ -556,6 +402,7 @@ Compare the whisker plots with jitters
 * MOOCs
  - Coursera
  - OpenEdX
+ - Open Courseware
 * Local
  - DC2 (or your local Meetup)
  - General Assembly
@@ -568,16 +415,27 @@ Compare the whisker plots with jitters
  - Reproduciblity (scripted processes)
  - Subject-matter Expertise, aka _Soft Skills_
 * Toolkits make Data Science scalable, extensible
-* Insights are the value added (not just data munging)
+* Value added comes from:
+ - Insights (not just data munging)
+ - Designing the process/tools
 * Team-oriented
 
 ---
 
 ### References
+<small>
+* [1] (http://somesite.net) "Where Did This Come From?"
+* [2] (http://oreilly.strata.com/salary-survey-or-something) "Strata Data Science Salary Survey"
+* [3] (http://kaggle.org/blog/) "Kaggle Blog"
+* [4] 
+* [5] 
+* [6] 
+* [7] 
+* [8] 
+* [9] 
+* [10] 
+</small>
 
-[1]: http://somesite.net "Where Did This Come From?"
-[2]: http://oreilly.strata.com/salary-survey-or-something "Strata"
-[3]: http://kaggle.org "Kaggle Blog"
 
 ---
 

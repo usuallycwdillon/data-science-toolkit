@@ -16,7 +16,8 @@ assets:
   js:
     - "http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
     - "http://bartaz.github.io/sandbox.js/jquery.highlight.js"
-
+header      :<small>Distribution: Unlimited</small>
+mylogo      :http://olea.org/ilustraciones/fedora-logo-icon.png
 ---
 
 <!-- Limit image width and height -->

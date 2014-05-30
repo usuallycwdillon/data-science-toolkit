@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
-  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
-  <link rel="stylesheet" href="libraries/highlighters/highlight/css/solarized_light.css" id="theme">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/solarized.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" id="theme">
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
   <![endif]-->  <link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.css">
@@ -39,201 +39,6 @@ img {
 $(function() {    
   $("p:has(img)").addClass('centered');
 });
-</script>
-
-<!-- Make slides printable to pdf from Chrome browsers -->
-
-<script type="text/javascript">
-/* Default Print Stylesheet Template
-by Rob Glazebrook of CSSnewbie.com
-Last Updated: June 4, 2008
-
-Feel free (nay, compelled) to edit, append, and
-manipulate this file as you see fit. */
-
-
-/* SECTION 1: Set default width, margin, float, and
-background. This prevents elements from extending
-beyond the edge of the printed page, and prevents
-unnecessary background images from printing */
-
-* {
--webkit-print-color-adjust: exact;
-}
-
-body {
-font-size: 18pt;
-width: 297mm;
-height: 229mm;
-margin: 0 auto !important;
-border: 0;
-padding: 0;
-float: none !important;
-overflow: visible;
-}
-
-html {
-width: 100%;
-height: 100%;
-overflow: visible;
-}
-
-@page {
-size: letter landscape;
-margin: 0;
-}
-
-/* SECTION 2: Remove any elements not needed in print.
-This would include navigation, ads, sidebars, etc. */
-.nestedarrow,
-.controls,
-.reveal .progress,
-.reveal.overview,
-.fork-reveal,
-.share-reveal,
-.state-background {
-display: none !important;
-}
-
-/* SECTION 3: Set body font face, size, and color.
-Consider using a serif font for readability. */
-body, p, td, li, div {
-font-size: 18pt;
-}
-
-/* SECTION 4: Set heading font face, sizes, and color.
-Differentiate your headings from your body text.
-Perhaps use a large sans-serif for distinction. */
-h1,h2,h3,h4,h5,h6 {
-text-shadow: 0 0 0 #000 !important;
-}
-
-/* SECTION 5: Make hyperlinks more usable.
-Ensure links are underlined, and consider appending
-the URL to the end of the link for usability. */
-a:link,
-a:visited {
-font-weight: normal;
-text-decoration: underline;
-}
-
-.reveal pre code {
-overflow: hidden !important;
-font-family: monospace !important;
-}
-
-
-/* SECTION 6: more reveal.js specific additions by @skypanther */
-ul, ol, div, p {
-visibility: visible;
-position: static;
-width: auto;
-height: auto;
-display: block;
-overflow: visible;
-margin: auto;
-}
-.reveal {
-width: auto !important;
-height: auto !important;
-overflow: hidden !important;
-}
-.reveal .slides {
-position: static;
-width: 100%;
-height: auto;
-
-left: auto;
-top: auto;
-margin: 0 !important;
-padding: 0 !important;
-
-overflow: visible;
-display: block;
-
-text-align: center;
-
--webkit-perspective: none;
--moz-perspective: none;
--ms-perspective: none;
-perspective: none;
-
--webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
--moz-perspective-origin: 50% 50%;
--ms-perspective-origin: 50% 50%;
-perspective-origin: 50% 50%;
-}
-.reveal .slides section {
-
-page-break-after: always !important;
-
-visibility: visible !important;
-position: relative !important;
-width: 100% !important;
-height: 229mm !important;
-min-height: 229mm !important;
-display: block !important;
-overflow: hidden !important;
-
-left: 0 !important;
-top: 0 !important;
-margin: 0 !important;
-padding: 2cm 2cm 0 2cm !important;
-box-sizing: border-box !important;
-
-opacity: 1 !important;
-
--webkit-transform-style: flat !important;
--moz-transform-style: flat !important;
--ms-transform-style: flat !important;
-transform-style: flat !important;
-
--webkit-transform: none !important;
--moz-transform: none !important;
--ms-transform: none !important;
-transform: none !important;
-}
-.reveal section.stack {
-margin: 0 !important;
-padding: 0 !important;
-page-break-after: avoid !important;
-height: auto !important;
-min-height: auto !important;
-}
-.reveal .absolute-element {
-margin-left: 2.2cm;
-margin-top: 1.8cm;
-}
-.reveal section .fragment {
-opacity: 1 !important;
-visibility: visible !important;
-
--webkit-transform: none !important;
--moz-transform: none !important;
--ms-transform: none !important;
-transform: none !important;
-}
-.reveal section .slide-background {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-z-index: 0;
-}
-.reveal section>* {
-position: relative;
-z-index: 1;
-}
-.reveal img {
-box-shadow: none;
-}
-.reveal .roll {
-overflow: visible;
-line-height: 1em;
-}
-.reveal small a {
-font-size: 16pt !important;
-}
 </script>
 
 <h2>A Data Science Toolkit</h2>
@@ -278,10 +83,11 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
    <section class='' data-state=''>
     <h3>Why We Care About Data Science</h3>
     <ul>
-<li>There&#39;s so much data!</li>
+<li>Currently trending</li>
+<li>There&#39;s so much more data now!</li>
 <li>Confluence of disciplines</li>
+<li>Production of insights and methods</li>
 <li>Reproducibility </li>
-<li>Production of insights </li>
 </ul>
 
     <aside class='notes'>
@@ -289,10 +95,29 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
     </aside>
    </section>
    <section class='' data-state=''>
-    <h3>Growth of Data</h3>
+    <h3>New Popularity of Data Science</h3>
 
-<p><img src="assets/img/DataGrowth.png" alt="Growth of Data" title="yes, that&#39;s really a lot of kitten pictures, but do they come from the same lady?">
-Growth of Data[1]</p>
+<ul>
+<li>A (new) way to integrate perspectives</li>
+<li>A way to leverage computer power
+
+<ul>
+<li>Speed, Volume, Reliability, Consistency</li>
+<li>Processing power, parallelization</li>
+</ul></li>
+<li>Applied Science </li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Growth of Data Availability</h3>
+
+<p><img src="assets/img/wapo_dataGrowth.jpg" alt="Growth of Data" title="yes, that&#39;s really a lot of kitten pictures, but do they come from the same lady?"> </p>
+
+<p>Growth of Data[1]</p>
 
     <aside class='notes'>
       
@@ -347,7 +172,7 @@ Growth of Data[1]</p>
    <section class='' data-state=''>
     <h3>Presentation Themes</h3>
     <ul>
-<li>Ecosystems of tools
+<li>Ecosystems of (software) tools 
 
 <ul>
 <li>O&#39;reilly/Strata Salary Survey, 2013 [2]</li>
@@ -357,14 +182,13 @@ Growth of Data[1]</p>
 
 <ul>
 <li>CRISP-DM [4]</li>
-<li>Production Line</li>
+<li>Data Science as building a production line</li>
 </ul></li>
 <li>Big Data
 
 <ul>
 <li>This presentation is <em>NOT//NOT</em> about big data</li>
 <li>but, these tools are necessary for big data</li>
-<li>continuous repetition</li>
 </ul></li>
 <li>Team-oriented
 
@@ -415,17 +239,16 @@ Growth of Data[1]</p>
 <li>*nix environments (OSX, Linux)
 
 <ul>
-<li>C/C++, </li>
+<li>C/C++ </li>
 <li>R (RCPP)</li>
 <li>Python</li>
 <li>JavaScript (Node)</li>
-<li>Never seen anything done in ObjectiveC</li>
 </ul></li>
 <li>Windows
 
 <ul>
-<li>C#</li>
-<li>VB.Net</li>
+<li>C#/VB.Net</li>
+<li>Tableau</li>
 </ul></li>
 </ul>
 
@@ -437,7 +260,12 @@ Growth of Data[1]</p>
     <h3>Subject-Matter Expertise</h3>
 
 <ul>
-<li>What to calculate, what it means</li>
+<li>What to calculate 
+
+<ul>
+<li>What it means</li>
+<li>How to approach a problem</li>
+</ul></li>
 <li>Why Soft Skills Matter [7]</li>
 </ul>
 
@@ -464,6 +292,7 @@ Growth of Data[1]</p>
 <li>Data sources
 
 <ul>
+<li>Repositories</li>
 <li>APIs</li>
 </ul></li>
 <li>Big data 
@@ -483,12 +312,18 @@ Growth of Data[1]</p>
     <h3>Sources</h3>
 
 <ul>
+<li>Warehouses &amp; Repos</li>
 <li>Accessibility
 
 <ul>
 <li>APIs</li>
 </ul></li>
-<li>Freedom</li>
+<li>Freedom
+
+<ul>
+<li>Lower the bar for entry</li>
+<li>Invite discussion, validation, improvement</li>
+</ul></li>
 </ul>
 
     <aside class='notes'>
@@ -499,13 +334,17 @@ Growth of Data[1]</p>
     <h3>Big Data</h3>
 
 <ul>
-<li>Flows</li>
-<li>Map-Reduce</li>
-<li>Importance of <em>repeatable</em> processes</li>
-<li>Documenting processes 
+<li>Good data science is prerequisite to big data</li>
+<li>Importance of <em>repeatable</em> processes
 
 <ul>
-<li>including cleaning the raw data</li>
+<li>Map-Reduce</li>
+<li>Process a data flow</li>
+</ul></li>
+<li>Like water treatment or electricity production
+
+<ul>
+<li>Data science == engineering the plant</li>
 </ul></li>
 </ul>
 
@@ -531,12 +370,29 @@ Growth of Data[1]</p>
    <section class='' data-state=''>
     <h3>Cleaning Data</h3>
     <ul>
-<li>Standardization</li>
+<li>Standardization
+
+<ul>
+<li>Mispellings, Initials</li>
+<li>Levenstein distance</li>
+</ul></li>
 <li>Missing values</li>
 </ul>
 
     <aside class='notes'>
-      
+      <h3>Missing Values</h3>
+
+<ul>
+<li>Filter out record with missing values</li>
+<li>Simulate missing values</li>
+<li>Replace with 0</li>
+</ul>
+,<h3>Missing Values</h3>,3,Missing Values,<ul>
+<li>Filter out record with missing values</li>
+<li>Simulate missing values</li>
+<li>Replace with 0</li>
+</ul>
+,pnotes
     </aside>
    </section>
    <section class='' data-state=''>
@@ -551,21 +407,9 @@ Growth of Data[1]</p>
 <li>Clarence W Dillon</li>
 <li>C. W. Dillion</li>
 <li>(FI {+ iff MI} + Levenstein distance &lt; 3 in Lastname)</li>
+<li>Differences in code lengths [8]</li>
 </ul></li>
 <li>Translating Units of Measure</li>
-</ul>
-
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   <section class='' data-state=''>
-    <h3>Missing Values</h3>
-
-<ul>
-<li>Filter out record with missing values</li>
-<li>Simulate missing values</li>
-<li>Replace with 0</li>
 </ul>
 
     <aside class='notes'>
@@ -616,6 +460,7 @@ Growth of Data[1]</p>
 <li>Lattice</li>
 <li>Interactive </li>
 <li>ggplot2</li>
+<li>network plots</li>
 </ul>
 
     <aside class='notes'>
@@ -666,18 +511,14 @@ Growth of Data[1]</p>
     <h3>Regression</h3>
 
 <ul>
-<li>What matters?</li>
-</ul>
-
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   <section class='' data-state=''>
-    <h3>Fit</h3>
+<li>Identifying dependent and independent factors</li>
+<li>Lingua Franca of statistical relationships
 
 <ul>
-<li>Quality control</li>
+<li>Correlation, way to deal with multiple factors</li>
+<li>Reliable quantitative method to contextualize results</li>
+</ul></li>
+<li>First step in predictive statistics </li>
 </ul>
 
     <aside class='notes'>
@@ -707,10 +548,14 @@ Growth of Data[1]</p>
     <h3>Reproducable research</h3>
 
 <ul>
-<li>You care because you value your own time/data</li>
+<li>You care because you value your own time/data
+
+<ul>
 <li class = '..or'>don&#39;t you?</li>
-<li>Share the code as well as the data</li>
-<li></li>
+<li>Can you reproduce your own work 6 months later?</li>
+</ul></li>
+<li>Share the code as well as the raw data</li>
+<li>This is a science of building the assembly line as much as the products</li>
 </ul>
 
     <aside class='notes'>
@@ -722,8 +567,19 @@ Growth of Data[1]</p>
 
 <ul>
 <li>Think of this as the packaging step for manufactured products</li>
-<li>Documentation</li>
-<li></li>
+<li>Documentation is like the instruction manaual </li>
+<li>Publication of reports
+
+<ul>
+<li>LaTeX and Sweave for printables</li>
+<li>Markdown and javascript for the web</li>
+</ul></li>
+<li>Publication of data
+
+<ul>
+<li>CSV, text or other open format</li>
+<li>Raw and processed data as well as results</li>
+</ul></li>
 </ul>
 
     <aside class='notes'>
@@ -763,6 +619,7 @@ Growth of Data[1]</p>
 <ul>
 <li>Coursera</li>
 <li>OpenEdX</li>
+<li>Open Courseware</li>
 </ul></li>
 <li>Local
 
@@ -783,14 +640,34 @@ Growth of Data[1]</p>
 <li>Subject-matter Expertise, aka <em>Soft Skills</em></li>
 </ul></li>
 <li>Toolkits make Data Science scalable, extensible</li>
-<li>Insights are the value added (not just data munging)</li>
+<li>Value added comes from:
+
+<ul>
+<li>Insights (not just data munging)</li>
+<li>Designing the process/tools</li>
+</ul></li>
 <li>Team-oriented</li>
 </ul>
 
 </section>
 <section class='' data-state='' id='slide-13'>
   <h3>References</h3>
-  
+  <p><small></p>
+
+<ul>
+<li><a href="http://somesite.net">1</a> &quot;Where Did This Come From?&quot;</li>
+<li><a href="http://oreilly.strata.com/salary-survey-or-something">2</a> &quot;Strata Data Science Salary Survey&quot;</li>
+<li><a href="http://kaggle.org/blog/">3</a> &quot;Kaggle Blog&quot;</li>
+<li>[4] </li>
+<li>[5] </li>
+<li>[6] </li>
+<li>[7] </li>
+<li>[8] </li>
+<li>[9] </li>
+<li>[10] 
+</small></li>
+</ul>
+
 </section>
 <section class='' data-state='' id='slide-14'>
   <h3>Contacting Us</h3>
@@ -822,9 +699,9 @@ Growth of Data[1]</p>
     controls: true,
     progress: true,
     history: true,
-    center: true,
-    theme: Reveal.getQueryHash().theme || 'default', 
-    transition: Reveal.getQueryHash().transition || 'default', 
+    center: false,
+    theme: Reveal.getQueryHash().theme || 'solarized', 
+    transition: Reveal.getQueryHash().transition || 'cube', 
     dependencies: [
     // Cross-browser shim that fully implements classList -
     // https://github.com/eligrey/classList.js/
@@ -856,6 +733,17 @@ $(function (){
   $("#example").popover(); 
   $("[rel='tooltip']").tooltip(); 
 });  
-</script>   
+</script>  
+<!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script src='libraries/highlighters/prettify/js/lang-r.js'></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- End Google Prettify --> 
 
 </html>

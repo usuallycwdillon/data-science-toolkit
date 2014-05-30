@@ -13,7 +13,7 @@ hitheme     : tomorrow # {tomorrow}
 widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 assets:
-  css    : "libraries/frameworks/revealjs/css/print/pdf.css" 
+  css    : css/print/pdf.css
 ---
 
 <!-- Limit image width and height -->

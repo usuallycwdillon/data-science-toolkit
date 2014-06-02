@@ -8,8 +8,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
-  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/solarized.css" id="theme">
-  <link rel="stylesheet" href="libraries/highlighters/prettify/css/tomorrow.css" id="theme">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight/css/tomorrow.css" id="theme">
   <!--[if lt IE 9]>
   <script src="lib/js/html5shiv.js"></script>
   <![endif]-->  <link rel="stylesheet" href = "libraries/widgets/bootstrap/css/bootstrap.css">
@@ -57,9 +57,9 @@ $(function() {
 <p><small> 
 We&#39;ll probably want to build this out with names and logos and stuff</p>
 
-<p><a href="http://icfi.com">Michael A.Smith</a></p>
+<p><a href="http://www.linkedin.com/in/mikesmith42/">Michael A.Smith</a></p>
 
-<p><a href="http://www.css.gmu.edu/?q=node/15">CW Dillon</a> </p>
+<p><a href="https://www.linkedin.com/in/cwdillon">CW Dillon</a> </p>
 
 <p>for <em>2014 MORS Symposium</em>, WG {29, 33}
 </small></p>
@@ -83,7 +83,7 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
    <section class='' data-state=''>
     <h3>Why We Care About Data Science</h3>
     <ul>
-<li>Currently trending</li>
+<li>Currently trending--sexiest job of 21st C</li>
 <li>There&#39;s so much more data now!</li>
 <li>Confluence of disciplines</li>
 <li>Production of insights and methods</li>
@@ -126,7 +126,7 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
    <section class='' data-state=''>
     <h3>Data Science Venn Diagram</h3>
 
-<p><img src="assets/img/VennDiagram2.png" alt="Data Science Venn Diagram---Enhanced" title="just kidding! ...don&#39;t drone me, man"></p>
+<p><img src="assets/img/VennDiagram_NIST.png" alt="Data Science Venn Diagram---Enhanced" title="See what happens when you just hack on your expertise without proper training?"></p>
 
     <aside class='notes'>
       
@@ -212,18 +212,18 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
 <li>Friends don&#39;t let friends use Excel for stats [5]</li>
 <li>Pick the ecosystem that&#39;s right for you</li>
 </ul></li>
-<li>OS Ecosystem:
+<li>OSS/FLOSS Ecosystem:
 
 <ul>
-<li>R, Python, Octave, ...</li>
+<li>R, Python</li>
+<li>Octave</li>
 </ul></li>
 <li>$ Ecosystem:
 
 <ul>
 <li>SAS/JMP, Matlab, Stata</li>
+<li>Tableau, NodeXL</li>
 </ul></li>
-<li>Windows Ecosystem:
--R, Python, Tableau, NetworkX</li>
 </ul>
 
 <p><small> source</small></p>
@@ -239,18 +239,32 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
 <li>*nix environments (OSX, Linux)
 
 <ul>
-<li>C/C++ </li>
-<li>R (RCPP)</li>
-<li>Python</li>
-<li>JavaScript (Node)</li>
+<li>C/C++, R (RCPP), Python, Java, Ruby, Perl, ... </li>
+<li>MySQL, Hadoop, MongoDB, Mahout, ...</li>
+<li>D3, Google Charts, homegrown viz</li>
 </ul></li>
 <li>Windows
 
 <ul>
-<li>C#/VB.Net</li>
-<li>Tableau</li>
+<li>C#, VB.Net</li>
+<li>SQL, Oracle, Excel</li>
+<li>Tableau, other JavaScript</li>
 </ul></li>
 </ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/kaggle-tools1.png" alt="Tools Data Scientists Use"></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/ecosystems.png" alt="Discovering the ecosystems"></p>
 
     <aside class='notes'>
       
@@ -700,7 +714,7 @@ We&#39;ll probably want to build this out with names and logos and stuff</p>
     progress: true,
     history: true,
     center: false,
-    theme: Reveal.getQueryHash().theme || 'solarized', 
+    theme: Reveal.getQueryHash().theme || 'default', 
     transition: Reveal.getQueryHash().transition || 'cube', 
     dependencies: [
     // Cross-browser shim that fully implements classList -
@@ -733,17 +747,6 @@ $(function (){
   $("#example").popover(); 
   $("[rel='tooltip']").tooltip(); 
 });  
-</script>  
-<!-- Google Prettify -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
-<script src='libraries/highlighters/prettify/js/lang-r.js'></script>
-<script>
-  var pres = document.getElementsByTagName("pre");
-  for (var i=0; i < pres.length; ++i) {
-    pres[i].className = "prettyprint linenums";
-  }
-  prettyPrint();
-</script>
-<!-- End Google Prettify --> 
+</script>   
 
 </html>

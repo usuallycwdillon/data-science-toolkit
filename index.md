@@ -3,12 +3,12 @@ title       : A Data Science Toolkit
 subtitle    : Presentation to MORSS WG33 and WG28
 author      : Michael A. Smith and Clarence W. Dillon
 job         : MORSS 2014
-framework   : revealjs        # {io2012, html5slides, shower, dzslides, ...}
+framework   : revealjs  # {io2012, html5slides, shower, dzslides, ...}
 revealjs : 
-  theme  : solarized #{sky,beige,simple,serif,night,default,solarized,moon}
+  theme  : default #{sky,beige,simple,serif,night,default,solarized,moon}
   transition: cube # {none, page, concave, zoom, linear, fade, default}
   center : "false"
-highlighter : prettify  # {highlight.js, prettify, highlight}
+highlighter : highlight  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow # {tomorrow} 
 widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
@@ -50,9 +50,9 @@ Outfitting Production lines for Data Products
 <small> 
 We'll probably want to build this out with names and logos and stuff
 
-[Michael A.Smith](http://icfi.com)
+[Michael A.Smith](http://www.linkedin.com/in/mikesmith42/)
 
-[CW Dillon](http://www.css.gmu.edu/?q=node/15) 
+[CW Dillon](https://www.linkedin.com/in/cwdillon) 
 
 for _2014 MORS Symposium_, WG {29, 33}
 </small>
@@ -72,11 +72,12 @@ This is where we add some text to explain what's what and why we're doing this a
 1. Describing the _Industrial Data Flow_
 1. Resources for your next steps
 
+
 --- &vertical
 
 ### Why We Care About Data Science
 
-* Currently trending
+* Currently trending--sexiest job of 21st C
 * There's so much more data now!
 * Confluence of disciplines
 * Production of insights and methods
@@ -106,7 +107,7 @@ Growth of Data[1]
 
 ### Data Science Venn Diagram
 
-![Data Science Venn Diagram---Enhanced](assets/img/VennDiagram2.png "just kidding! ...don't drone me, man")
+![Data Science Venn Diagram---Enhanced](assets/img/VennDiagram_NIST.png "See what happens when you just hack on your expertise without proper training?")
 
 
 *** 
@@ -154,12 +155,12 @@ Growth of Data[1]
 * Right tool for the job
  - Friends don't let friends use Excel for stats [5]
  - Pick the ecosystem that's right for you
-* OS Ecosystem:
- - R, Python, Octave, ...
+* OSS/FLOSS Ecosystem:
+ - R, Python
+ - Octave
 * $ Ecosystem:
  - SAS/JMP, Matlab, Stata
-* Windows Ecosystem:
- -R, Python, Tableau, NetworkX
+ - Tableau, NodeXL
 
 <small> source</small>
 
@@ -168,15 +169,25 @@ Growth of Data[1]
 ### Programming
 
 * *nix environments (OSX, Linux)
- - C/C++ 
- - R (RCPP)
- - Python
- - JavaScript (Node)
+ - C/C++, R (RCPP), Python, Java, Ruby, Perl, ... 
+ - MySQL, Hadoop, MongoDB, Mahout, ...
+ - D3, Google Charts, homegrown viz
 * Windows
- - C#/VB.Net
- - Tableau
+ - C#, VB.Net
+ - SQL, Oracle, Excel
+ - Tableau, other JavaScript
  
 ***
+
+![Tools Data Scientists Use](assets/img/kaggle-tools1.png)
+
+***
+
+![Discovering the ecosystems](assets/img/ecosystems.png)
+
+
+
+*** 
 
 ### Subject-Matter Expertise
 

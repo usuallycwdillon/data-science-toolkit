@@ -78,7 +78,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Why We Care About Data Science
 
-* Currently trending--sexiest job of 21st C
+* Currently trending
 * There's so much more data now!
 * Confluence of disciplines
 * Production of insights and methods
@@ -133,7 +133,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ***
 
-### Statistics
+### Statistics & Math
 
 * Right tool for the job
  - Friends don't let friends use Excel for stats [5], [8]
@@ -149,9 +149,9 @@ This is where we add some text to explain what's what and why we're doing this a
 
 *** 
 
-### Programming
+### Hacking
 
-* *nix environments (OSX, Linux)
+* 'nix environments (OSX, Linux)
  - C/C++, R (RCPP), Python, Java, Ruby, Perl, ... 
  - MySQL, Hadoop, MongoDB, Mahout, ...
  - D3, Google Charts, homegrown viz

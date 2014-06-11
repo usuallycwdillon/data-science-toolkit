@@ -2,7 +2,9 @@
 title       : A Data Science Toolkit
 subtitle    : Presentation to MORSS WG33 and WG28
 author      : Michael A. Smith and Clarence W. Dillon
-job         : MORSS 2014
+job         : MORSS 2014 Presenters
+license     : by-nc-sa
+logo        : gmu.png
 framework   : revealjs  # {io2012, html5slides, shower, dzslides, ...}
 revealjs : 
   theme  : default #{sky,beige,simple,serif,night,default,solarized,moon}
@@ -12,15 +14,14 @@ highlighter : highlight  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow # {tomorrow} 
 widgets     : [mathjax, bootstrap]            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
-assets:
-  css    : css/print/pdf.css
+assets      : {css: print/pdf.css} 
 ---
 
 <!-- Limit image width and height -->
 <style type="text/css">
 img {    
-  max-height: 660px;    
-  max-width: 1020px;
+  max-height: 860px;    
+  max-width: 1240px;
 }
 </style>
  
@@ -48,11 +49,11 @@ Outfitting Production lines for Data Products
 </br>
    
 <small> 
-We'll probably want to build this out with names and logos and stuff
 
-[Michael A.Smith](http://www.linkedin.com/in/mikesmith42/)
 
-[CW Dillon](https://www.linkedin.com/in/cwdillon) 
+[Michael A.Smith](http://www.linkedin.com/in/mikesmith42/), Sr. Analyst at ICF International
+
+[Clarence Dillon](https://www.linkedin.com/in/cwdillon), Graduate Student at GMU's Krasnow Institute
 
 for _2014 MORS Symposium_, WG {29, 33}
 </small>
@@ -93,76 +94,58 @@ This is where we add some text to explain what's what and why we're doing this a
  - Processing power, parallelization
 * Applied Science 
  
- 
-****
-
-### Growth of Data Availability
-
-![Growth of Data](assets/img/wapo_dataGrowth.jpg "yes, that's really a lot of kitten pictures, but do they come from the same lady?") 
-
-Growth of Data[1]
-
-
-****
-
-### Data Science Venn Diagram
-
-![Data Science Venn Diagram---Enhanced](assets/img/VennDiagram_NIST.png "See what happens when you just hack on your expertise without proper training?")
-
 
 *** 
 
 ### Reproducibility
 
-* Reproducibility vs Replicable
-* Closest we can do with social data
+* Reproducibility vs Replicability
+* Closest we can do with event and social data
  - not _completely_ scientific
  - better than nothing 
-* Necessary for next set of data 
- - Do you need (or deserve) an API? 
+* Necessary for engineering the data process 
+* Toolkit enables production of insights 
  
- 
-***
+*** 
 
-### Data Process
+![Growth of Data](assets/img/wapo_dataGrowth.jpg "Growth of Data--Washington Post, endnote 1") 
 
-* Reproducibility is much of what makes this a _science_
-* Using the toolkit for end-to-end production of insights
-* What we share should take us from raw data to final product 
+<small>Growth of Data[1]</small>
 
 
 --- &vertical
 
-### Presentation Themes 
+### Data Science
 
-* Ecosystems of (software) tools 
- - O'reilly/Strata Salary Survey, 2013 [2]
- - Kaggle Competition Entries, 2012 [3]
-* Process Steps 
- - CRISP-DM [4]
- - Data Science as building a production line
-* Big Data
- - This presentation is _NOT//NOT_ about big data
- - but, these tools are necessary for big data
-* Team-oriented
- - Process-aware specialists
- - Area expertise 
+* Sexiest job of the 21st Century
+* New kinds of data and inquiry necessitate a new set of skills
+ - What distinguishes a data scientist
+ - Databases contain data; data science generates data products
+* Statistics: the grammar of data science
+* A team sport
+
+***
+
+![Data Science Venn Diagram---Enhanced](assets/img/VennDiagram_cwd.png "See what happens when you just hack on your expertise without proper training?")
+
+<small>Drew Conway and NIST [2]</small>
+
 
 ***
 
 ### Statistics
 
 * Right tool for the job
- - Friends don't let friends use Excel for stats [5]
+ - Friends don't let friends use Excel for stats [5], [8]
  - Pick the ecosystem that's right for you
-* OSS/FLOSS Ecosystem:
+* *nix Ecosystem:
  - R, Python
  - Octave
-* $ Ecosystem:
- - SAS/JMP, Matlab, Stata
+* Windows Ecosystem:
+ - SAS/JMP, Stata
  - Tableau, NodeXL
 
-<small> source</small>
+<small>Strata Data Science Salary Survey 2013 [2]</small>
 
 *** 
 
@@ -177,16 +160,6 @@ Growth of Data[1]
  - SQL, Oracle, Excel
  - Tableau, other JavaScript
  
-***
-
-![Tools Data Scientists Use](assets/img/kaggle-tools1.png)
-
-***
-
-![Discovering the ecosystems](assets/img/ecosystems.png)
-
-
-
 *** 
 
 ### Subject-Matter Expertise
@@ -194,8 +167,37 @@ Growth of Data[1]
 * What to calculate 
  - What it means
  - How to approach a problem
-* Why Soft Skills Matter [7]
+* Why Soft Skills Matter [6]
+ - Understand the fundamental problem...
+ - ...not the analytic problem
 
+***
+
+![Tools Data Scientists Use](assets/img/kaggle-tools1_big.png "Kaggle Competition Entries, 2012 [3]")
+
+***
+
+![Discovering the ecosystems](assets/img/ecosystems.png "O'reilly/Strata Salary Survey, 2013 [2]")
+
+***
+
+![Friends Don't Let Friends Use Excel](assets/img/RightTool.jpg "Univ. Iowa Stats [5]")
+
+
+--- &vertical
+
+### Presentation Themes 
+
+* Process Steps 
+ - Cross-industry Standard Process for Data Mining (CRISP-DM) [4]
+ - Data Science as building a production line
+* Big Data
+ - This presentation is _NOT//NOT_ about big data
+ - but, these tools are necessary for big data 
+
+***
+
+![CRISP-DM](assets/img/CRISP-DM_Process_Diagram.png "Wikipedia is a great reference for this [4]")
 
 ---
 
@@ -212,10 +214,11 @@ Growth of Data[1]
 ### Data Acquisition
 
 * Data sources
- - Repositories
- - APIs
+ - Repositories (downloadable)
+ - APIs (JSON, XML, ...) [9]
+ - Databases (SQL, JSON, XML, Hbase, ... )
 * Big data 
- - (that's the last time we talk about it)
+ - (it'll be the last time we talk about it)
 * Provenance
 * Keep a copy of the raw data
 
@@ -258,8 +261,8 @@ Growth of Data[1]
 ### Cleaning Data
 
 * Standardization
- - Mispellings, Initials
- - Levenstein distance
+ - Misspellings, Initials
+ - Levenshtein distance
 * Missing values
 
 
@@ -272,13 +275,12 @@ Growth of Data[1]
   - CW Dillon
   - Clarence W Dillon
   - C. W. Dillion
- - (FI {+ iff MI} + Levenstein distance < 3 in Lastname)
- - Differences in code lengths [8]
+ - Differences in code lengths [7]
+  - Java: 24, C++: 63, VB.Net: 20, C#: 39
+  - Python: 15, PHP: 1, R: 2
 * Translating Units of Measure
 
 *** =pnotes
-
-
  
 ### Missing Values
 
@@ -301,21 +303,26 @@ Growth of Data[1]
 ### Shape and Volume
 
 * Format 
- - Open formats: CSV, TSV, XML
+ - Open formats: CSV, TSV, XML, JSON
  - Closed formats: .DTA, .SAS, .XLS(X)
 * Shape
- - Long, sparse
+ - Long or wide, sparse or dense
  - Tabular, nested
+* Size
+ - How big will it be in program memory?
+ - Does the JVM need a bigger heap size?
+ - Can it be loaded bit-by-bit?
 
 ***
  
 ### Exploratory Viz
 
-* Lattice
-* Interactive 
-* ggplot2
-* network plots
-
+* Lattice and pair-wise comparisons
+* Interactive graphics
+ - ggplot2 (ggplot or qplot)
+* Networks
+ - layouts
+ - trees and hierarchies
 
 ***
 
@@ -323,7 +330,9 @@ Growth of Data[1]
 
 * Summary statistics
  - Measures of central tendency
-* Auto Regression
+ - Compare to impressions from size/shape
+* Autoregression
+
 
 
 ***
@@ -332,7 +341,7 @@ Growth of Data[1]
 
 Compare the whisker plots with jitters
 
-![Jitters vs Whiskers](/assets/summaryPlot.png)
+![Jitters vs Whiskers](/assets/img/summaryPlot.png)
 
 
 --- &vertical
@@ -341,7 +350,7 @@ Compare the whisker plots with jitters
 
 * This is the 'secret sauce' for your data product
 * Demonstrate the insight(s) from exploration and analysis
-
+* Narrate the data story
 
 ***
 
@@ -358,15 +367,16 @@ Compare the whisker plots with jitters
 
 ### Product
 
-* Reproducable research
+* Reproducible research
 * Sharing code & data
  - PDFs of tables are cruel and thwart the cause of science
  - PowerPoint is where data goes to die
 * If you're product is good, it deserves an API
 
+
 ***
 
-### Reproducable research
+### Reproducible research
 
 * You care because you value your own time/data
  - ...or don't you?
@@ -380,12 +390,12 @@ Compare the whisker plots with jitters
 ### Data Products
 
 * Think of this as the packaging step for manufactured products
-* Documentation is like the instruction manaual 
+* Documentation is like the instruction manual  
 * Publication of reports
  - LaTeX and Sweave for printables
  - Markdown and javascript for the web
 * Publication of data
- - CSV, text or other open format
+ - CSV, JSON, text or other open format
  - Raw and processed data as well as results
 
 
@@ -403,16 +413,17 @@ Compare the whisker plots with jitters
 
 ### Resources for More Info
 
-* Local University Education
- - GW program
- - GMU program
- - UMUC program
-* MOOCs
- - Coursera
- - OpenEdX
- - Open Courseware
+* Local University Programs
+ - GW: Business Analytics
+ - GMU: Computational Informatics, Data Science
+ - UMUC: Human-Computer Interaction, Systems Research
+* Online
+ - MOOCS: Coursera, EdX, Open Courseware
+ - CodeCademy, Code School (O'reilly), Lynda
+ - Blogs and newsletters: O'reilly, Is(R), ...
 * Local
- - DC2 (or your local Meetup)
+ - Data Community DC 
+ - ...or your local Meetup
  - General Assembly
 
 ---
@@ -420,28 +431,27 @@ Compare the whisker plots with jitters
 ### Conclusion 
 
 * Data Science is not just 'applied statistics'
- - Reproduciblity (scripted processes)
+ - Reproducibility (scripted processes)
  - Subject-matter Expertise, aka _Soft Skills_
+ - Team sport (no unicorns)
 * Toolkits make Data Science scalable, extensible
 * Value added comes from:
  - Insights (not just data munging)
  - Designing the process/tools
-* Team-oriented
 
 ---
 
 ### References
 <small>
-* [1] (http://somesite.net) "Where Did This Come From?"
+* [1] (http://www.washingtonpost.com/wp-dyn/content/graphic/2011/02/11/GR2011021100614.html) "Rise of the Digital Information Age, __Washington Post__"
 * [2] (http://oreilly.strata.com/salary-survey-or-something) "Strata Data Science Salary Survey"
 * [3] (http://kaggle.org/blog/) "Kaggle Blog"
-* [4] 
-* [5] 
-* [6] 
-* [7] 
-* [8] 
-* [9] 
-* [10] 
+* [4] (http://en.wikipedia.org/wiki/Cross_Industry_Standard_Process_for_Data_Mining)
+* [5] (http://homepage.stat.uiowa.edu/~jcryer/22s008/righttool.htm) "right tool for the job, Univ. Iowa Statistics"
+* [6] (http://data-informed.com/soft-skills-matter-data-science/)"DataInformed - why soft skills matter "
+* [7] (http://rosettacode.org/wiki/Levenshtein_distance) "Rosetta Code" 
+* [8] (http://files.shareholder.com/downloads/ONE/2272984969x0x628656/4cb574a0-0bf5-4728-9582-625e4519b5ab/Task_Force_Report.pdf) "JP Morgan fined for use of Excel to model risk"
+* [9] (http://orchestrate.io/blog/2014/02/12/what-you-should-demand-from-apis/) "What You Should Demand from APIs"
 </small>
 
 
@@ -450,9 +460,9 @@ Compare the whisker plots with jitters
 ### Contacting Us
 
 * Michael A Smith
- - ICF, Int'l 
- - email...
+ - ICF International 
+ - [mike.smith@icfi.com](mike.smith@icfi.com)
 * Clarence Dillon
- - GMU & Complexity Studies
- - studycomplexity.org
+ - GMU & Fast Forward Analytics, LLC
+ - [cdillon2@gmu.edu](cdillon2@masonlive.gmu.edu), [cwdillon@fastforwardanalytics.com](cwdillon@fastforwardanalytics.com) 
 

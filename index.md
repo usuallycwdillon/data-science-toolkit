@@ -323,6 +323,13 @@ This is where we add some text to explain what's what and why we're doing this a
 * Networks
  - layouts
  - trees and hierarchies
+ 
+***
+
+### Visualization Sequiter 
+
+![Labels](http://imgs.xkcd.com/comics/convincing.png)
+
 
 ***
 
@@ -332,7 +339,6 @@ This is where we add some text to explain what's what and why we're doing this a
  - Measures of central tendency
  - Compare to impressions from size/shape
 * Autoregression
-
 
 
 ***

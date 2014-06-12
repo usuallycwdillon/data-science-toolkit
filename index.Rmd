@@ -177,7 +177,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ***
 
-![Discovering the ecosystems](assets/img/ecosystems.png "O'reilly/Strata Salary Survey, 2013 [2]")
+![Discovering the ecosystems](assets/img/ecosystems_1600.png "O'reilly/Strata Salary Survey, 2013 [2]")
 
 ***
 

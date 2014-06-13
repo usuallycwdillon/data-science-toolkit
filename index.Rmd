@@ -20,7 +20,7 @@ assets      : {css: print/pdf.css}
 <!-- Limit image width and height -->
 <style type="text/css">
 img {    
-  max-height: 860px;    
+  max-height: 660px;    
   max-width: 1240px;
 }
 </style>
@@ -133,6 +133,11 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ***
 
+![Friends Don't Let Friends Use Excel](assets/img/RightTool.jpg "Univ. Iowa Stats [5]")
+
+
+***
+
 ### Statistics & Math
 
 * Right tool for the job
@@ -178,10 +183,6 @@ This is where we add some text to explain what's what and why we're doing this a
 ***
 
 ![Discovering the ecosystems](assets/img/ecosystems_1200.png "O'reilly/Strata Salary Survey, 2013 [2]")
-
-***
-
-![Friends Don't Let Friends Use Excel](assets/img/RightTool.jpg "Univ. Iowa Stats [5]")
 
 
 --- &vertical
@@ -293,10 +294,10 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Explore Data
 
-* Exploratory statistics (summary stats)
+* Format, volume, shape, size, extent, ...
 * Exploratory visualization
-* Volume (size and extent)
-* Shape
+* Exploratory statistics (summary stats)
+
 
 ***
 
@@ -304,7 +305,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 * Format 
  - Open formats: CSV, TSV, XML, JSON
- - Closed formats: .DTA, .SAS, .XLS(X)
+ - Closed formats: DTA, SAS, XLS(X)
 * Shape
  - Long or wide, sparse or dense
  - Tabular, nested
@@ -317,19 +318,27 @@ This is where we add some text to explain what's what and why we're doing this a
  
 ### Exploratory Viz
 
-* Lattice and pair-wise comparisons
+* Lattice (and other pair-wise/factor comparisons)
 * Interactive graphics
  - ggplot2 (ggplot or qplot)
 * Networks
  - layouts
  - trees and hierarchies
  
+
+***
+
+### Lattice Example
+
+![Lattice](http://lmdvr.r-forge.r-project.org/figures/images/Figure_02_01_stdColor.png)
+
+<small>Lattice[10]</small> 
+
 ***
 
 ### Visualization Sequiter 
 
 ![Labels](http://imgs.xkcd.com/comics/convincing.png)
-
 
 ***
 
@@ -340,15 +349,17 @@ This is where we add some text to explain what's what and why we're doing this a
  - Compare to impressions from size/shape
 * Autoregression
 
+***
+
+### Summary Stats Awareness
+
+![Jitters vs Whiskers](assets/img/BoxesVsWhiskars.png)
 
 ***
 
-### Problems with Summary Stats
+### More Summary Stats Awareness
 
-Compare the whisker plots with jitters
-
-![Jitters vs Whiskers](/assets/img/summaryPlot.png)
-
+![Jitters vs Whiskers](assets/img/BoxesVsWhiskars_log10.png)
 
 --- &vertical
 
@@ -377,7 +388,7 @@ Compare the whisker plots with jitters
 * Sharing code & data
  - PDFs of tables are cruel and thwart the cause of science
  - PowerPoint is where data goes to die
-* If you're product is good, it deserves an API
+* If you're product is good, it may deserve an API
 
 
 ***
@@ -409,10 +420,14 @@ Compare the whisker plots with jitters
 
 ### APIs
 
-* What
-* Why
-* How
+* What an API is
+* Why it's useful, before and after
+* What you'll need to access most data
+ - OAuth, OpenID, local accounts
+ - PKI certificates
+*  Building an API
  - automated API tools
+ - 
 
 
 ---
@@ -458,6 +473,7 @@ Compare the whisker plots with jitters
 * [7] (http://rosettacode.org/wiki/Levenshtein_distance) "Rosetta Code" 
 * [8] (http://files.shareholder.com/downloads/ONE/2272984969x0x628656/4cb574a0-0bf5-4728-9582-625e4519b5ab/Task_Force_Report.pdf) "JP Morgan fined for use of Excel to model risk"
 * [9] (http://orchestrate.io/blog/2014/02/12/what-you-should-demand-from-apis/) "What You Should Demand from APIs"
+* [10] (http://lmdvr.r-forge.r-project.org/figures/figures.html) "Deepayan Sarkur, __Lattice: Multi-variate Data Visualization with R__"
 </small>
 
 

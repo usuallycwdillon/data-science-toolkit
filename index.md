@@ -132,7 +132,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Data Science
 
-* Sexiest job of the 21st Century
+* Sexiest job of the 21st Century [12]
 * New kinds of data and inquiry necessitate a new set of skills
  - What distinguishes a data scientist
  - Databases contain data; data science generates data products
@@ -197,7 +197,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ***
 
-![Discovering the ecosystems](assets/img/ecosystems_1200.png "O'reilly/Strata Salary Survey, 2013 [2]")
+![Discovering the ecosystems](assets/img/ecosystems_660.png "O'reilly/Strata Salary Survey, 2013 [2]")
 
 
 ---
@@ -331,7 +331,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Lattice Example
 
-![Lattice](http://lmdvr.r-forge.r-project.org/figures/images/Figure_02_01_stdColor.png)
+![Lattice](http://lmdvr.r-forge.r-project.org/figures/images/Figure_02_01_stdColor.png "Lattice: Multi-variate Data Visualisations in R [10]")
 
 <small>Lattice[10]</small> 
 
@@ -339,7 +339,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Visualization Sequiter 
 
-![Labels](http://imgs.xkcd.com/comics/convincing.png)
+![Labels](http://imgs.xkcd.com/comics/convincing.png "XKCD #833 [13]")
 
 ***
 
@@ -473,8 +473,10 @@ This is where we add some text to explain what's what and why we're doing this a
 * [7] (http://rosettacode.org/wiki/Levenshtein_distance) "Rosetta Code" 
 * [8] (http://files.shareholder.com/downloads/ONE/2272984969x0x628656/4cb574a0-0bf5-4728-9582-625e4519b5ab/Task_Force_Report.pdf) "JP Morgan fined for use of Excel to model risk"
 * [9] (http://orchestrate.io/blog/2014/02/12/what-you-should-demand-from-apis/) "What You Should Demand from APIs"
-* [10] (http://lmdvr.r-forge.r-project.org/figures/figures.html) "Deepayan Sarkur, __Lattice: Multi-variate Data Visualization with R__"
+* [10] (http://lmdvr.r-forge.r-project.org/figures/figures.html) "Deepayan Sarkar, __Lattice: Multi-variate Data Visualization with R__"
 * [11] (http://www.edureka.in/blog/types-of-data-scientists/?imm_mid=0bd168&cmp=em-strata-na-na-newsltr_20140528_elist) "Types of Data Scientist"
+* [12] (http://www.nytimes.com/2009/08/06/technology/06stats.html)"New York Times __For Today’s Graduate, Just One Word: Statistics__, August 5, 2009"
+* [13] (http://xkcd.com/833/) "XKCD, 'Commitment' "
 
 </small>
 

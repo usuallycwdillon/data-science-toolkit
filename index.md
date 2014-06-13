@@ -272,6 +272,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ### Standardization
 
+* Translating Units of Measure
 * Dealing with typos and differences
  - Who worked on this briefing?
   - CW Dillon
@@ -280,15 +281,17 @@ This is where we add some text to explain what's what and why we're doing this a
  - Differences in code lengths [7]
   - Java: 24, C++: 63, VB.Net: 20, C#: 39
   - Python: 15, PHP: 1, R: 2
-* Translating Units of Measure
 
-*** =pnotes
+
+*** 
  
 ### Missing Values
 
-* Filter out record with missing values
+* Filter out records with missing values
 * Simulate missing values
-* Replace with 0
+ - adding replacement records 
+ - consider the impact on other correlations
+* Replace with 0 or 'NA' explicitly
 
 
 --- &vertical

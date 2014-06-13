@@ -108,7 +108,7 @@ This is where we add some text to explain what's what and why we're doing this a
  
 *** 
 
-![Growth of Data](assets/img/wapo_dataGrowth.jpg "Growth of Data--Washington Post, endnote 1") 
+![Growth of Data](assets/img/wapo_dataGrowth_660.jpg "Growth of Data--Washington Post, endnote 1") 
 
 <small>Growth of Data[1]</small>
 

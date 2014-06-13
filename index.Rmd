@@ -125,7 +125,7 @@ This is where we add some text to explain what's what and why we're doing this a
 
 ***
 
-![CRISP-DM](assets/img/CRISP-DM_Process_Diagram.png "Wikipedia is a great reference for this [4]")
+![CRISP-DM](assets/img/CRISP-DM_Process_Diagram_660.png "Wikipedia is a great reference for this [4]")
 
 
 --- &vertical

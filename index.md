@@ -112,6 +112,21 @@ This is where we add some text to explain what's what and why we're doing this a
 
 <small>Growth of Data[1]</small>
 
+--- &vertical
+
+### Presentation Themes 
+
+* Process Steps 
+ - Cross-industry Standard Process for Data Mining (CRISP-DM) [4]
+ - Data Science as building a production line
+* Big Data
+ - This presentation is _NOT//NOT_ about big data
+ - but, these tools are necessary for big data 
+
+***
+
+![CRISP-DM](assets/img/CRISP-DM_Process_Diagram.png "Wikipedia is a great reference for this [4]")
+
 
 --- &vertical
 
@@ -185,21 +200,6 @@ This is where we add some text to explain what's what and why we're doing this a
 ![Discovering the ecosystems](assets/img/ecosystems_1200.png "O'reilly/Strata Salary Survey, 2013 [2]")
 
 
---- &vertical
-
-### Presentation Themes 
-
-* Process Steps 
- - Cross-industry Standard Process for Data Mining (CRISP-DM) [4]
- - Data Science as building a production line
-* Big Data
- - This presentation is _NOT//NOT_ about big data
- - but, these tools are necessary for big data 
-
-***
-
-![CRISP-DM](assets/img/CRISP-DM_Process_Diagram.png "Wikipedia is a great reference for this [4]")
-
 ---
 
 ### Process
@@ -217,9 +217,10 @@ This is where we add some text to explain what's what and why we're doing this a
 * Data sources
  - Repositories (downloadable)
  - APIs (JSON, XML, ...) [9]
- - Databases (SQL, JSON, XML, Hbase, ... )
+ - Databases (SQL, JSON, XML, ... )
 * Big data 
  - (it'll be the last time we talk about it)
+ - Hbase, Pig, Hive
 * Provenance
 * Keep a copy of the raw data
 
@@ -413,21 +414,20 @@ This is where we add some text to explain what's what and why we're doing this a
  - Markdown and javascript for the web
 * Publication of data
  - CSV, JSON, text or other open format
- - Raw and processed data as well as results
+ - Raw data and processed data as well as process and results
 
 
 ***
 
 ### APIs
 
-* What an API is
+* Selective mirror for your data
+ - REST-ful service
+ - "easy" does not (necessarily) mean "free"
 * Why it's useful, before and after
 * What you'll need to access most data
  - OAuth, OpenID, local accounts
  - PKI certificates
-*  Building an API
- - automated API tools
- - 
 
 
 ---
@@ -455,10 +455,10 @@ This is where we add some text to explain what's what and why we're doing this a
  - Reproducibility (scripted processes)
  - Subject-matter Expertise, aka _Soft Skills_
  - Team sport (no unicorns)
-* Toolkits make Data Science scalable, extensible
+* Toolkit make Data Science scalable, extensible
 * Value added comes from:
  - Insights (not just data munging)
- - Designing the process/tools
+ - Designing the process/tools; reproducibilty
 
 ---
 
@@ -474,6 +474,8 @@ This is where we add some text to explain what's what and why we're doing this a
 * [8] (http://files.shareholder.com/downloads/ONE/2272984969x0x628656/4cb574a0-0bf5-4728-9582-625e4519b5ab/Task_Force_Report.pdf) "JP Morgan fined for use of Excel to model risk"
 * [9] (http://orchestrate.io/blog/2014/02/12/what-you-should-demand-from-apis/) "What You Should Demand from APIs"
 * [10] (http://lmdvr.r-forge.r-project.org/figures/figures.html) "Deepayan Sarkur, __Lattice: Multi-variate Data Visualization with R__"
+* [11] (http://www.edureka.in/blog/types-of-data-scientists/?imm_mid=0bd168&cmp=em-strata-na-na-newsltr_20140528_elist) "Types of Data Scientist"
+
 </small>
 
 

@@ -108,7 +108,7 @@ This is where we add some text to explain what's what and why we're doing this a
  
 *** 
 
-![Growth of Data](assets/img/wapo_dataGrowth_660.jpg "Growth of Data--Washington Post, endnote 1") 
+![Growth of Data](assets/img/DataGrowth.png "Growth of Data--Washington Post, endnote 1") 
 
 <small>Growth of Data[1]</small>
 
@@ -188,8 +188,9 @@ This is where we add some text to explain what's what and why we're doing this a
  - What it means
  - How to approach a problem
 * Why Soft Skills Matter [6]
- - Understand the fundamental problem...
- - ...not the analytic problem
+ - area experts are driven fundamental question
+ - statisticians & programmers focus on the analytic problem
+
 
 ***
 
@@ -220,7 +221,7 @@ This is where we add some text to explain what's what and why we're doing this a
  - Databases (SQL, JSON, XML, ... )
 * Big data 
  - (it'll be the last time we talk about it)
- - Hbase, Pig, Hive
+ - Hadoop, Pig, Hive
 * Provenance
 * Keep a copy of the raw data
 
@@ -244,18 +245,23 @@ This is where we add some text to explain what's what and why we're doing this a
 * Good data science is prerequisite to big data
 * Importance of _repeatable_ processes
  - Map-Reduce
- - Process a data flow
+ - Continuous process of a data flow
 * Like water treatment or electricity production
- - Data science == engineering the plant
+ - Data science == engineering the facility
  
  
 *** 
 
 ### Provenance
 
-* What have you got
-* Where did it come from
-* Where did they get it
+* Validation and accreditation
+ - What have you got
+ - Where did it come from
+ - Has somebody tampered with it
+* How did your source get it
+ - any pre-processing or amalgamation
+ - original (field) data may be 'dirty'
+ - machine-generated data may be 'buggy'
 
 
 --- &vertical
@@ -263,21 +269,21 @@ This is where we add some text to explain what's what and why we're doing this a
 ### Cleaning Data
 
 * Standardization
+ - Units of Measure
  - Misspellings, Initials
- - Levenshtein distance
+ - Systematic or occasional differences
 * Missing values
-
+* Maintaining traceability
 
 *** 
 
 ### Standardization
 
 * Translating Units of Measure
+ - standard libraries
+ - explicit translations
 * Dealing with typos and differences
- - Who worked on this briefing?
-  - CW Dillon
-  - Clarence W Dillon
-  - C. W. Dillion
+ - Levenshtein distance
  - Differences in code lengths [7]
   - Java: 24, C++: 63, VB.Net: 20, C#: 39
   - Python: 15, PHP: 1, R: 2

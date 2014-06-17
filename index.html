@@ -131,7 +131,7 @@ $(function() {
     </aside>
    </section>
    <section class='' data-state=''>
-    <p><img src="assets/img/wapo_dataGrowth_660.jpg" alt="Growth of Data" title="Growth of Data--Washington Post, endnote 1"> </p>
+    <p><img src="assets/img/DataGrowth.png" alt="Growth of Data" title="Growth of Data--Washington Post, endnote 1"> </p>
 
 <p><small>Growth of Data[1]</small></p>
 
@@ -272,8 +272,8 @@ $(function() {
 <li>Why Soft Skills Matter [6]
 
 <ul>
-<li>Understand the fundamental problem...</li>
-<li class = '..not'>the analytic problem</li>
+<li>area experts are driven fundamental question</li>
+<li>statisticians &amp; programmers focus on the analytic problem</li>
 </ul></li>
 </ul>
 
@@ -322,7 +322,7 @@ $(function() {
 
 <ul>
 <li>(it&#39;ll be the last time we talk about it)</li>
-<li>Hbase, Pig, Hive</li>
+<li>Hadoop, Pig, Hive</li>
 </ul></li>
 <li>Provenance</li>
 <li>Keep a copy of the raw data</li>
@@ -363,12 +363,12 @@ $(function() {
 
 <ul>
 <li>Map-Reduce</li>
-<li>Process a data flow</li>
+<li>Continuous process of a data flow</li>
 </ul></li>
 <li>Like water treatment or electricity production
 
 <ul>
-<li>Data science == engineering the plant</li>
+<li>Data science == engineering the facility</li>
 </ul></li>
 </ul>
 
@@ -380,9 +380,20 @@ $(function() {
     <h3>Provenance</h3>
 
 <ul>
+<li>Validation and accreditation
+
+<ul>
 <li>What have you got</li>
 <li>Where did it come from</li>
-<li>Where did they get it</li>
+<li>Has somebody tampered with it</li>
+</ul></li>
+<li>How did your source get it
+
+<ul>
+<li>any pre-processing or amalgamation</li>
+<li>original (field) data may be &#39;dirty&#39;</li>
+<li>machine-generated data may be &#39;buggy&#39;</li>
+</ul></li>
 </ul>
 
     <aside class='notes'>
@@ -397,10 +408,12 @@ $(function() {
 <li>Standardization
 
 <ul>
+<li>Units of Measure</li>
 <li>Misspellings, Initials</li>
-<li>Levenshtein distance</li>
+<li>Systematic or occasional differences</li>
 </ul></li>
 <li>Missing values</li>
+<li>Maintaining traceability</li>
 </ul>
 
     <aside class='notes'>
@@ -411,14 +424,16 @@ $(function() {
     <h3>Standardization</h3>
 
 <ul>
-<li>Translating Units of Measure</li>
+<li>Translating Units of Measure
+
+<ul>
+<li>standard libraries</li>
+<li>explicit translations</li>
+</ul></li>
 <li>Dealing with typos and differences
 
 <ul>
-<li>Who worked on this briefing?</li>
-<li>CW Dillon</li>
-<li>Clarence W Dillon</li>
-<li>C. W. Dillion</li>
+<li>Levenshtein distance</li>
 <li>Differences in code lengths [7]</li>
 <li>Java: 24, C++: 63, VB.Net: 20, C#: 39</li>
 <li>Python: 15, PHP: 1, R: 2</li>
